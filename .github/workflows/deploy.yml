@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Copy HTML
+        uses: appleboy/ssh-action@v0.1.2
         with:
             host: ${{secrets.DEVOPS_CASESTUDY_HOST}}
             key: ${{secrets.GHUB_DEPLOY_USER_PRIV}}
