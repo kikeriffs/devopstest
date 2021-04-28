@@ -15,7 +15,7 @@ jobs:
             username: ${{secrets.GHUB_DEPLOY_USER}}
           
             script: |
-              mkdir devopstest
+              if [ ! -d /home/ghub-deploy/devopstest ]; then mkdir devopstest; fi
               cd devopstest
               git clone https://github.com/kikeriffs/devopstest.git
               cp devopstest/index.html /var/www/html/index.html
