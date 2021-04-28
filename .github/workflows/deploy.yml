@@ -1,0 +1,20 @@
+name: devops-test-felmo
+on:
+  push:
+    branches: [master]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Copy HTML
+      with:
+          host: ${{secrets.DEVOPS_CASESTUDY_HOST}}
+          key: ${{secrets.GHUB_DEPLOY_USER_PRIV}}
+          user: ${{secrets.GHUB_DEPLOY_USER}}
+          
+          script: |
+            mkdir devopstest
+            cd devopstest
+            git clone https://github.com/kikeriffs/devopstest.git
+            cp devopstest/index.html /var/www/html/index.html
