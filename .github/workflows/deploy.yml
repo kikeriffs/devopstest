@@ -17,5 +17,5 @@ jobs:
             script: |
               mkdir -p devopstest
               cd devopstest
-              git pull https://github.com/kikeriffs/devopstest.git
+              git pull main
               cp devopstest/index.html /var/www/html/index.html
