@@ -12,7 +12,7 @@ jobs:
         with:
             host: ${{secrets.DEVOPS_CASESTUDY_HOST}}
             key: ${{secrets.GHUB_DEPLOY_USER_PRIV}}
-            user: ${{secrets.GHUB_DEPLOY_USER}}
+            username: ${{secrets.GHUB_DEPLOY_USER}}
           
             script: |
               mkdir devopstest
