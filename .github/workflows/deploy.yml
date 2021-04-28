@@ -17,5 +17,5 @@ jobs:
             script: |
               mkdir -p devopstest
               cd devopstest/devopstest
-              git pull main
+              git pull origin main
               cp index.html /var/www/html/index.html
